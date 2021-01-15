@@ -179,7 +179,7 @@ public class ChooseAreaFragment extends Fragment {
                     @Override
                     public void run() {
                         closeProgressDialog();
-                        Toast.makeText(getContext(), "加载失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "网络原因，加载失败", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -223,7 +223,7 @@ public class ChooseAreaFragment extends Fragment {
     private void showProgressDialog() {
 
         if (progressDialog==null){
-            Log.i(TAG, "progressDialog=null");
+//            Log.i(TAG, "progressDialog=null");
             progressDialog = new ProgressDialog(getActivity());
             progressDialog.setMessage("正在加载");
             progressDialog.setCanceledOnTouchOutside(false);
